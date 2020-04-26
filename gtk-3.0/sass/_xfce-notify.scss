@@ -1,0 +1,48 @@
+@import "./_variables.scss";
+@import "./_drawing.scss";
+
+#XfceNotifyWindow {
+  background-color: $bg_main_dark;
+  color: $white_color;
+  border: 1px solid $bg_main_dark;
+}
+
+#XfceNotifyWindow button {
+  background-image: none;
+  background-color: transparent;
+  color: $white_color;
+  border-color: gtkalpha($white_color, 0.2);
+  border-radius: 3px;
+  @extend %ripple_animation;
+
+  &:hover {
+    background-color: gtkalpha($white_color, 0.2);
+  }
+}
+
+#XfceNotifyWindow label#summary {
+  font-weight: bold;
+}
+
+#XfceNotifyWindow progressbar {
+  min-height: 6px;
+  border-radius: 3px;
+}
+
+#XfceNotifyWindow progressbar progress {
+  background-image: none;
+  background-color: $white_color;
+  border: none;
+  box-shadow: none;
+}
+
+#XfceNotifyWindow progressbar trough {
+  background-image: linear-gradient(
+    to bottom,
+    shade($bg_main_dark, 0.65),
+    shade($bg_main_dark, 1.25)
+  );
+  border: 1px solid shade($bg_main_dark, 0.2);
+  border-radius: 3px;
+  padding: 1px 0;
+}

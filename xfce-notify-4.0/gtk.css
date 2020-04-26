@@ -1,0 +1,69 @@
+/* 
+ orange accent: #ff821a
+ blue accent: rgb(0, 126, 255)
+ */
+/* To keep consistence with other gtk themes and how sass functions 
+are declared, the file name will be _drawing instead 
+of previous _functions */
+@keyframes ripple {
+  to {
+    background-size: 1000% 1000%;
+  }
+}
+@keyframes ripple_effect {
+  from {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.1) 0%, transparent 0%);
+  }
+  to {
+    background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.1) 100%, transparent 0%);
+  }
+}
+#XfceNotifyWindow button {
+  background-image: radial-gradient(transparent, transparent);
+}
+#XfceNotifyWindow button:active {
+  transition: background-color 0.00001s 0.1s;
+  animation: ripple_effect 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+#XfceNotifyWindow {
+  background-color: #011014;
+  color: #ffffff;
+  border: 1px solid #011014;
+}
+
+#XfceNotifyWindow button {
+  background-image: none;
+  background-color: transparent;
+  color: #ffffff;
+  border-color: alpha(#ffffff, 0.2);
+  border-radius: 3px;
+}
+#XfceNotifyWindow button:hover {
+  background-color: alpha(#ffffff, 0.2);
+}
+
+#XfceNotifyWindow label#summary {
+  font-weight: bold;
+}
+
+#XfceNotifyWindow progressbar {
+  min-height: 6px;
+  border-radius: 3px;
+}
+
+#XfceNotifyWindow progressbar progress {
+  background-image: none;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: none;
+}
+
+#XfceNotifyWindow progressbar trough {
+  background-image: linear-gradient(to bottom, shade(#011014, 0.65), shade(#011014, 1.25));
+  border: 1px solid shade(#011014, 0.2);
+  border-radius: 3px;
+  padding: 1px 0;
+}
+
+/*# sourceMappingURL=gtk.css.map */

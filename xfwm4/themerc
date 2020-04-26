@@ -1,0 +1,31 @@
+# Forked from Axis xfwm theme by Rogier Koppejan.
+
+# Note: if you want the window title to be aligned to the right,
+# but with some space between the title and the buttons, make
+# sure to set "title_horizontal_offset" properly (i.e. 20).
+
+button_offset=3
+button_spacing=0
+
+show_app_icon=false
+
+full_width_title=true
+
+title_shadow_active=false
+title_shadow_active=false
+
+title_horizontal_offset=3
+
+active_text_color=#202020
+inactive_text_color=#949494
+
+shadow_delta_height=1
+shadow_delta_width=0
+shadow_delta_x=0
+shadow_delta_y=-5
+shadow_opacity=40
+
+
+
+
+
