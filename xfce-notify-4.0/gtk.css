@@ -19,6 +19,9 @@ of previous _functions */
   }
 }
 #XfceNotifyWindow button {
+  transition-property: all, border-image, background-size, background-image;
+  transition-duration: 75ms, 225ms, 300ms, 1200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   background-image: radial-gradient(transparent, transparent);
 }
 #XfceNotifyWindow button:active {

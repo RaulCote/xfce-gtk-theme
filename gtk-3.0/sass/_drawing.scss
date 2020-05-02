@@ -56,10 +56,17 @@ $ripple-active-transition-duration: $duration, $ripple-fade-in-duration, 0ms,
 }
 
 %ripple_animation {
+  transition-property: $ripple-transition-property;
+  transition-duration: $ripple-transition-duration;
+  transition-timing-function: $ease-out;
   background-image: radial-gradient(transparent, transparent);
 
   &:active {
     transition: background-color 0.00001s 0.1s;
     animation: ripple_effect 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
   }
+}
+
+@mixin fake_font_weight($color) {
+  text-shadow: 0 0px $color, 0px 0px $color, 0px 0px $color;
 }

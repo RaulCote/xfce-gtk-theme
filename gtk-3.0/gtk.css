@@ -19,10 +19,13 @@ of previous _functions */
     background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.1) 100%, transparent 0%);
   }
 }
-.xfce4-panel.background button {
+#whiskermenu-window button, .xfce4-panel.background button {
+  transition-property: all, border-image, background-size, background-image;
+  transition-duration: 75ms, 225ms, 300ms, 1200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   background-image: radial-gradient(transparent, transparent);
 }
-.xfce4-panel.background button:active {
+#whiskermenu-window button:active, .xfce4-panel.background button:active {
   transition: background-color 0.00001s 0.1s;
   animation: ripple_effect 0.2s cubic-bezier(0, 0, 0.2, 1) forwards;
 }
@@ -12461,78 +12464,83 @@ wnck-pager:hover {
   background-color: alpha(#007eff, 0.15);
 }
 
-/*****Whisker menu settings**********/
+/* whisker menu */
 #whiskermenu-window {
   border-radius: 2px;
-  background-color: rgba(83, 85, 92, 0.95);
+  background-color: #011014;
   color: #dde2e7;
 }
-
-#whiskermenu-window frame {
-  border-radius: 2px;
-  box-shadow: 1px 7px 7px 7px rgba(0, 0, 0, 0.26);
-  /*border: 3px solid black;*/
+#whiskermenu-window frame > border {
+  border-radius: 0;
+  border-color: transparent;
 }
-
-/* Make sidebar buttons match */
+#whiskermenu-window frame {
+  background-color: #011014;
+  color: #dde2e7;
+}
 #whiskermenu-window button {
-  margin-right: 8px;
-  margin-left: 4px;
+  margin-right: 10px;
+  margin-left: 5px;
   padding-left: 6px;
   padding-right: 6px;
+  width: 500px;
   border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: transparent;
   color: #dde2e7;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
 }
-
 #whiskermenu-window button:hover {
-  background-color: #393a3f;
-  color: #fff;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+  /* Make sidebar buttons match */
+  background-color: alpha(#ffffff, 0.1);
+  color: #fbfcfc;
 }
-
 #whiskermenu-window button:checked {
-  background-color: #393a3f;
-  color: #fff;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+  color: #fbfcfc;
+  text-shadow: 0 0px #dde2e7, 0px 0px #dde2e7, 0px 0px #dde2e7;
+}
+#whiskermenu-window button iconview {
+  background-color: #011014;
+  color: #dde2e7;
+}
+#whiskermenu-window button scrolledwindow .view {
+  background-color: #011014;
+  color: #dde2e7;
+}
+#whiskermenu-window button scrolledwindow .view:selected:hover {
+  background-color: #011014;
+  color: #dde2e7;
 }
 
 /* Make treeview match */
-#whiskermenu-window treeview {
-  background-color: rgba(57, 58, 63, 0.95);
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 6px;
-  padding-right: 6px;
+#whiskermenu-window entry.search {
+  padding: 2px 8px;
+  caret-color: #dde2e7;
   color: #dde2e7;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+  background-color: #011014;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  padding-bottom: 2px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1);
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #007eff 0%, transparent 0%) 2/0 0 0px;
 }
-
-#whiskermenu-window treeview:hover {
-  background-color: #3e77bb;
-  color: #fff;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+#whiskermenu-window entry.search:focus {
+  padding-bottom: 0px;
+  background-color: #011014;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-image: radial-gradient(circle closest-corner at center calc(100% -1px), #007eff 100%, transparent 0%) 2/0 0 2px;
 }
-
-#whiskermenu-window entry,
-#whiskermenu-window entry:focus {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 8px;
-  margin-right: 8px;
+#whiskermenu-window entry.search image {
   color: #dde2e7;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.12);
-  border-bottom-color: rgba(0, 0, 0, 0.18);
-  border-top-color: rgba(0, 0, 0, 0.08);
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #393a3f, #393a3f);
 }
-
-#whiskermenu-window scrollbar {
-  background-color: rgba(57, 58, 63, 0.9);
+#whiskermenu-window entry.search image:focus {
+  color: #007eff;
 }
 
 /* GTK NAMED COLORS
