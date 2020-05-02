@@ -1,0 +1,83 @@
+/*****Whisker menu settings**********/
+
+#whiskermenu-window {
+  border-radius: 2px;
+
+  background-color: rgba(83, 85, 92, 0.95);
+  color: #dde2e7;
+}
+#whiskermenu-window frame {
+  border-radius: 2px;
+  box-shadow: 1px 7px 7px 7px rgba(0, 0, 0, 0.26);
+  /*border: 3px solid black;*/
+}
+
+/* Make sidebar buttons match */
+#whiskermenu-window button {
+  margin-right: 8px;
+  margin-left: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: none;
+  background-color: transparent;
+  color: #dde2e7;
+  text-shadow: 0 -1px gtkalpha(#ffffff, 0.04), -1px 0px gtkalpha(#202020, 0.05),
+    1px 0px gtkalpha(#202020, 0.05), 0px 1px gtkalpha(#202020, 0.5),
+    0px 2px gtkalpha(#202020, 0.05);
+}
+#whiskermenu-window button:hover {
+  background-color: #393a3f;
+  color: #fff;
+  text-shadow: 0 -1px gtkalpha(#ffffff, 0.04), -1px 0px gtkalpha(#202020, 0.05),
+    1px 0px gtkalpha(#202020, 0.05), 0px 1px gtkalpha(#202020, 0.5),
+    0px 2px gtkalpha(#202020, 0.05);
+}
+#whiskermenu-window button:checked {
+  background-color: #393a3f;
+  color: #fff;
+  text-shadow: 0 -1px gtkalpha(#ffffff, 0.04), -1px 0px gtkalpha(#202020, 0.05),
+    1px 0px gtkalpha(#202020, 0.05), 0px 1px gtkalpha(#202020, 0.5),
+    0px 2px gtkalpha(#202020, 0.05);
+}
+
+/* Make treeview match */
+#whiskermenu-window treeview {
+  background-color: rgba(57, 58, 63, 0.95);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #dde2e7;
+  text-shadow: 0 -1px gtkalpha(#ffffff, 0.04), -1px 0px gtkalpha(#202020, 0.05),
+    1px 0px gtkalpha(#202020, 0.05), 0px 1px gtkalpha(#202020, 0.5),
+    0px 2px gtkalpha(#202020, 0.05);
+}
+#whiskermenu-window treeview:hover {
+  background-color: #3e77bb;
+  color: #fff;
+  text-shadow: 0 -1px gtkalpha(#ffffff, 0.04), -1px 0px gtkalpha(#202020, 0.05),
+    1px 0px gtkalpha(#202020, 0.05), 0px 1px gtkalpha(#202020, 0.5),
+    0px 2px gtkalpha(#202020, 0.05);
+}
+#whiskermenu-window entry,
+#whiskermenu-window entry:focus {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #dde2e7;
+  text-shadow: 0 -1px gtkalpha(#ffffff, 0.04), -1px 0px gtkalpha(#202020, 0.05),
+    1px 0px gtkalpha(#202020, 0.05), 0px 1px gtkalpha(#202020, 0.5),
+    0px 2px gtkalpha(#202020, 0.05);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-bottom-color: rgba(0, 0, 0, 0.18);
+  border-top-color: rgba(0, 0, 0, 0.08);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, #393a3f, #393a3f);
+}
+
+#whiskermenu-window scrollbar {
+  background-color: rgba(57, 58, 63, 0.9);
+}
+

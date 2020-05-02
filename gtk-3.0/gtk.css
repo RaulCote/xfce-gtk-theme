@@ -12107,80 +12107,6 @@ checkbutton label:not(:only-child):last-child {
   margin-right: 4px;
 }
 
-/*****Whisker menu settings**********/
-#whiskermenu-window {
-  border-radius: 2px;
-  background-color: rgba(83, 85, 92, 0.95);
-  color: #dde2e7;
-}
-
-#whiskermenu-window frame {
-  border-radius: 2px;
-  box-shadow: 1px 7px 7px 7px rgba(0, 0, 0, 0.26);
-  /*border: 3px solid black;*/
-}
-
-/* Make sidebar buttons match */
-#whiskermenu-window button {
-  margin-right: 8px;
-  margin-left: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  border: none;
-  background-color: transparent;
-  color: #dde2e7;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
-}
-
-#whiskermenu-window button:hover {
-  background-color: #393a3f;
-  color: #fff;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
-}
-
-#whiskermenu-window button:checked {
-  background-color: #393a3f;
-  color: #fff;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
-}
-
-/* Make treeview match */
-#whiskermenu-window treeview {
-  background-color: rgba(57, 58, 63, 0.95);
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 6px;
-  padding-right: 6px;
-  color: #dde2e7;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
-}
-
-#whiskermenu-window treeview:hover {
-  background-color: #3e77bb;
-  color: #fff;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
-}
-
-#whiskermenu-window entry,
-#whiskermenu-window entry:focus {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 8px;
-  margin-right: 8px;
-  color: #dde2e7;
-  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.12);
-  border-bottom-color: rgba(0, 0, 0, 0.18);
-  border-top-color: rgba(0, 0, 0, 0.08);
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #393a3f, #393a3f);
-}
-
-#whiskermenu-window scrollbar {
-  background-color: rgba(57, 58, 63, 0.9);
-}
-
 /****************
  * Libre-Office *
  ****************/
@@ -12291,41 +12217,6 @@ wnck-pager:active {
 }
 wnck-pager:hover {
   background-color: alpha(#ffffff, 0.1);
-}
-
-#XfceNotifyWindow {
-  background-color: #011014;
-  color: #fcfcfc;
-  border: 0px solid #011014;
-}
-
-#XfceNotifyWindow button {
-  background-color: #011014;
-  color: #fcfcfc;
-  border-color: #011014;
-  border-radius: 2px;
-}
-
-#XfceNotifyWindow label#summary {
-  font-weight: bold;
-}
-
-#XfceNotifyWindow progressbar {
-  min-height: 6px;
-  border-radius: 3px;
-}
-
-#XfceNotifyWindow progressbar progress {
-  background-color: #fcfcfc;
-  border: none;
-  box-shadow: none;
-}
-
-#XfceNotifyWindow progressbar trough {
-  background-image: linear-gradient(to bottom, shade(#46484f, 0.65), shade(#46484f, 1.25));
-  border: 1px solid shade(#46484f, 0.2);
-  border-radius: 3px;
-  padding: 1px 0;
 }
 
 /* Thunar File Manager */
@@ -12568,6 +12459,80 @@ wnck-pager:hover {
 }
 .thunar .sidebar treeview.view:selected:hover {
   background-color: alpha(#007eff, 0.15);
+}
+
+/*****Whisker menu settings**********/
+#whiskermenu-window {
+  border-radius: 2px;
+  background-color: rgba(83, 85, 92, 0.95);
+  color: #dde2e7;
+}
+
+#whiskermenu-window frame {
+  border-radius: 2px;
+  box-shadow: 1px 7px 7px 7px rgba(0, 0, 0, 0.26);
+  /*border: 3px solid black;*/
+}
+
+/* Make sidebar buttons match */
+#whiskermenu-window button {
+  margin-right: 8px;
+  margin-left: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: none;
+  background-color: transparent;
+  color: #dde2e7;
+  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+}
+
+#whiskermenu-window button:hover {
+  background-color: #393a3f;
+  color: #fff;
+  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+}
+
+#whiskermenu-window button:checked {
+  background-color: #393a3f;
+  color: #fff;
+  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+}
+
+/* Make treeview match */
+#whiskermenu-window treeview {
+  background-color: rgba(57, 58, 63, 0.95);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #dde2e7;
+  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+}
+
+#whiskermenu-window treeview:hover {
+  background-color: #3e77bb;
+  color: #fff;
+  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+}
+
+#whiskermenu-window entry,
+#whiskermenu-window entry:focus {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #dde2e7;
+  text-shadow: 0 -1px alpha(#ffffff, 0.04), -1px 0px alpha(#202020, 0.05), 1px 0px alpha(#202020, 0.05), 0px 1px alpha(#202020, 0.5), 0px 2px alpha(#202020, 0.05);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-bottom-color: rgba(0, 0, 0, 0.18);
+  border-top-color: rgba(0, 0, 0, 0.08);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, #393a3f, #393a3f);
+}
+
+#whiskermenu-window scrollbar {
+  background-color: rgba(57, 58, 63, 0.9);
 }
 
 /* GTK NAMED COLORS
