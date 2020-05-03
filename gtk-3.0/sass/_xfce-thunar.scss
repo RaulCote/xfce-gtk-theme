@@ -3,13 +3,13 @@
 .thunar menubar {
   -gtkwidget-window-dragging: true;
   padding: 0px;
-  background-color: $bg_main_gray;
+  background-color: $bg_color;
 }
 
 .thunar.menubar {
   -gtkwidget-window-dragging: true;
   padding: 0px;
-  background-color: $bg_main_gray;
+  background-color: $bg_color;
 }
 
 .thunar toolbar {
@@ -17,7 +17,7 @@
   padding-bottom: 4px;
   padding-left: 2px;
   padding-right: 8px;
-  background-color: $bg_main_gray;
+  background-color: $bg_color;
 }
 
 .thunar toolbar:backdrop {
@@ -107,7 +107,7 @@
   color: $text_color;
   text-shadow: none;
   border-radius: 0px;
-  background-color: $bg_main_gray;
+  background-color: $bg_color;
   background-image: none;
   @include bottom_border_effect(normal);
 }
@@ -115,7 +115,7 @@
 .thunar toolbar .linked:not(.vertical).path-bar > button:hover {
   font-style: normal;
   text-shadow: none;
-  // background-color: $bg_main_gray;
+  // background-color: $bg_color;
   @include bottom_border_effect(normal);
   background-color: $bg_item_hover;
 }
@@ -126,7 +126,7 @@
   background-image: none;
   font-style: normal;
   color: $accent_color;
-  background-color: $bg_main_gray;
+  background-color: $bg_color;
   @include bottom_border_effect(normal);
 }
 
@@ -136,7 +136,7 @@
   font-style: normal;
   color: $text_color;
   background-image: none;
-  background-color: $bg_main_gray;
+  background-color: $bg_color;
   @include bottom_border_effect(checked);
 }
 
@@ -208,31 +208,23 @@
 /* pane border */
 .thunar separator {
   background-image: none;
-  background-color: gtkalpha($item_gray, 0.2);
+  background-color: $separator_color;
 }
 
 /* borders below menubar */
 .thunar .sidebar,
 .thunar .frame {
-  border-top-color: gtkalpha($item_gray, 0.2);
+  border-top-color: $separator_color;
   background-image: none;
 }
 
-// .thunar .frame widget {
-//   background-color: $entry_bg_color;
-
-//   :backdrop {
-//     @extend %backdrop_opacity;
-//   }
-// }
 /* sidebar stylings */
-
 .thunar .sidebar:backdrop {
   @extend %backdrop_opacity;
 }
 
 .thunar .sidebar treeview.view {
-  background-color: $bg_main_gray;
+  background-color: $bg_color;
   color: $text_color;
   background-image: none;
 

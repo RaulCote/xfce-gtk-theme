@@ -9,24 +9,33 @@ $theme_mode: "light";
  */
 $white_color: #ffffff;
 $accent_color: rgb(0, 126, 255);
-$bg_main_gray: if($theme_mode == "light", #f6f6f6, #011014);
+$bg_color: if($theme_mode == "light", #f6f6f6, #011014);
+$bg_base: if(
+  $theme_mode == "light",
+  $white_color,
+  mix($accent_color, $bg_color, 5%)
+);
 $bg_main_dark: #011014;
 $text_on_dark: #dde2e7;
 $bg_item_hover: if(
   $theme_mode == "light",
-  darken($bg_main_gray, 4%),
-  mix($white_color, $bg_main_gray, 10%)
+  darken($bg_color, 8%),
+  mix($white_color, $bg_color, 10%)
 );
 $entry_bg_color: if(
   $theme_mode == "light",
   $white_color,
-  mix($white_color, $bg_main_gray, 3%)
+  mix($white_color, $bg_color, 3%)
 );
-$item_gray: #838383;
+$separator_color: if(
+  $theme_mode == "light",
+  darken($bg_color, 7%),
+  lighten($bg_color, 2%)
+);
 $ripple_ultra_light: if(
   $theme_mode == "light",
   gtkalpha($accent_color, 0.1),
-  mix($accent_color, $bg_main_gray, 30%)
+  mix($accent_color, $bg_color, 30%)
 );
 $text_color: if($theme_mode == "light", #181818, #ececec);
 $selected_color: $accent_color;
@@ -34,7 +43,7 @@ $text_on_selected: #ffffff;
 $bg_selected_hover: if(
   $theme_mode == "light",
   gtkalpha($accent_color, 0.15),
-  mix($accent_color, $bg_main_gray, 30%)
+  mix($accent_color, $bg_color, 30%)
 );
 $icon_view_background: $accent_color;
 $content_view: purple;
