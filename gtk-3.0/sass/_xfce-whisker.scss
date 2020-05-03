@@ -1,36 +1,78 @@
 /* whisker menu */
 
 #whiskermenu-window {
-  border-radius: 2px;
-
   background-color: $bg_main_dark;
   color: $text_on_dark;
 
+  stack > box {
+    /* whisker bottom right triangle */
+    border-color: transparent;
+    border: none;
+    color: transparent;
+  }
+
   frame > border {
+    /* outter border */
     border-radius: 0;
     border-color: transparent;
   }
 
-  frame {
+  scrolledwindow {
+    /* inner border */
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+  }
+
+  entry.search {
+    padding: 2px 8px;
+    caret-color: $text_on_dark;
+    color: $text_on_dark;
+    background-color: $bg_main_dark;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    padding-bottom: 2px;
+    @include bottom_border_effect(normal);
+
+    &:focus {
+      padding-bottom: 0px;
+      background-color: $bg_main_dark;
+      @include bottom_border_effect(checked);
+    }
+
+    image {
+      color: $text_on_dark;
+
+      &:focus {
+        color: $accent_color;
+      }
+    }
+  }
+
+  frame .view {
+    /* inner background & selected items */
     background-color: $bg_main_dark;
     color: $text_on_dark;
+
+    &:hover,
+    &:selected {
+      background-color: $accent_color;
+    }
   }
 
   button {
+    /* category buttons */
     margin-right: 10px;
     margin-left: 5px;
-    padding-left: 6px;
-    padding-right: 6px;
-    width: 500px;
+    padding: 5px 6px;
     border: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
     background-color: transparent;
     color: $text_on_dark;
     @extend %ripple_animation;
 
     &:hover {
-      /* Make sidebar buttons match */
       background-color: gtkalpha($white_color, 0.1);
       color: lighten($text_on_dark, 10%);
     }
@@ -39,66 +81,32 @@
       color: lighten($text_on_dark, 10%);
       @include fake_font_weight($text_on_dark);
     }
+  }
 
-    iconview {
-      background-color: $bg_main_dark;
-      color: $text_on_dark;
+  scrollbar {
+    background-color: $bg_main_dark;
+
+    button {
+      border: none;
+      min-width: 0px;
+      min-height: 0px;
+      margin: 0px;
+      padding: 0px;
     }
+    slider {
+      min-width: 6px;
+      min-height: 6px;
+      background-color: gtkalpha($white_color, 0.3);
+      border: none;
+      border-color: transparent;
 
-    scrolledwindow {
-      .view {
-        background-color: $bg_main_dark;
-        color: $text_on_dark;
+      &:hover {
+        background-color: gtkalpha($white_color, 0.5);
+      }
 
-        &:selected:hover {
-          background-color: $bg_main_dark;
-          color: $text_on_dark;
-        }
+      &:hover:active {
+        background-color: $white_color;
       }
     }
   }
 }
-
-/* Make treeview match */
-// #whiskermenu-window treeview {
-//   background-color: $bg_main_dark;
-//   padding-top: 1px;
-//   padding-bottom: 1px;
-//   padding-left: 6px;
-//   padding-right: 6px;
-//   color: $text_on_dark;
-// }
-
-// #whiskermenu-window treeview:hover {
-//   background-color: #3e77bb;
-//   color: #fff;
-// }
-#whiskermenu-window entry.search {
-  padding: 2px 8px;
-  caret-color: $text_on_dark;
-  color: $text_on_dark;
-  background-color: $bg_main_dark;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  border-top-color: transparent;
-  padding-bottom: 2px;
-  @include bottom_border_effect(normal);
-
-  &:focus {
-    padding-bottom: 0px;
-    background-color: $bg_main_dark;
-    @include bottom_border_effect(checked);
-  }
-
-  image {
-    color: $text_on_dark;
-
-    &:focus {
-      color: $accent_color;
-    }
-  }
-}
-
-// #whiskermenu-window scrollbar {
-//   background-color: $bg_main_dark;
-// }

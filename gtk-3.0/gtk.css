@@ -12466,53 +12466,27 @@ wnck-pager:hover {
 
 /* whisker menu */
 #whiskermenu-window {
-  border-radius: 2px;
   background-color: #011014;
   color: #dde2e7;
 }
+#whiskermenu-window stack > box {
+  /* whisker bottom right triangle */
+  border-color: transparent;
+  border: none;
+  color: transparent;
+}
 #whiskermenu-window frame > border {
+  /* outter border */
   border-radius: 0;
   border-color: transparent;
 }
-#whiskermenu-window frame {
-  background-color: #011014;
-  color: #dde2e7;
+#whiskermenu-window scrolledwindow {
+  /* inner border */
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
 }
-#whiskermenu-window button {
-  margin-right: 10px;
-  margin-left: 5px;
-  padding-left: 6px;
-  padding-right: 6px;
-  width: 500px;
-  border: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: transparent;
-  color: #dde2e7;
-}
-#whiskermenu-window button:hover {
-  /* Make sidebar buttons match */
-  background-color: alpha(#ffffff, 0.1);
-  color: #fbfcfc;
-}
-#whiskermenu-window button:checked {
-  color: #fbfcfc;
-  text-shadow: 0 0px #dde2e7, 0px 0px #dde2e7, 0px 0px #dde2e7;
-}
-#whiskermenu-window button iconview {
-  background-color: #011014;
-  color: #dde2e7;
-}
-#whiskermenu-window button scrolledwindow .view {
-  background-color: #011014;
-  color: #dde2e7;
-}
-#whiskermenu-window button scrolledwindow .view:selected:hover {
-  background-color: #011014;
-  color: #dde2e7;
-}
-
-/* Make treeview match */
 #whiskermenu-window entry.search {
   padding: 2px 8px;
   caret-color: #dde2e7;
@@ -12541,6 +12515,53 @@ wnck-pager:hover {
 }
 #whiskermenu-window entry.search image:focus {
   color: #007eff;
+}
+#whiskermenu-window frame .view {
+  /* inner background & selected items */
+  background-color: #011014;
+  color: #dde2e7;
+}
+#whiskermenu-window frame .view:hover, #whiskermenu-window frame .view:selected {
+  background-color: #007eff;
+}
+#whiskermenu-window button {
+  margin-right: 10px;
+  margin-left: 5px;
+  padding: 5px 6px;
+  border: none;
+  background-color: transparent;
+  color: #dde2e7;
+}
+#whiskermenu-window button:hover {
+  background-color: alpha(#ffffff, 0.1);
+  color: #fbfcfc;
+}
+#whiskermenu-window button:checked {
+  color: #fbfcfc;
+  text-shadow: 0 0px #dde2e7, 0px 0px #dde2e7, 0px 0px #dde2e7;
+}
+#whiskermenu-window scrollbar {
+  background-color: #011014;
+}
+#whiskermenu-window scrollbar button {
+  border: none;
+  min-width: 0px;
+  min-height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+#whiskermenu-window scrollbar slider {
+  min-width: 6px;
+  min-height: 6px;
+  background-color: alpha(#ffffff, 0.3);
+  border: none;
+  border-color: transparent;
+}
+#whiskermenu-window scrollbar slider:hover {
+  background-color: alpha(#ffffff, 0.5);
+}
+#whiskermenu-window scrollbar slider:hover:active {
+  background-color: #ffffff;
 }
 
 /* GTK NAMED COLORS
