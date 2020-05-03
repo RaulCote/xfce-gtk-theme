@@ -1,0 +1,46 @@
+/* Xfwm4's alt-tab dialog, aka "tabwin" */
+
+/* prettier-ignore */
+#xfwm-tabwin {
+  /* Set the application icon- and preview-size to 64px */
+  -XfwmTabwinWidget-icon-size: 64px;
+  -XfwmTabwinWidget-preview-size: 64px;
+}
+
+#xfwm-tabwin {
+  padding: 15px;
+  // background-image: radial-gradient($bg_main_dark, $bg_main_dark);
+  background-image: none;
+  background-color: $bg_main_dark;
+  color: $text_on_dark;
+  border-radius: 0px;
+  border: 0px solid transparent;
+
+  border {
+    border-color: transparent;
+  }
+
+  button {
+    background-image: none;
+    color: #ffffff;
+    font-weight: bold;
+    // text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
+    border-color: transparent;
+    // border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    // @extend %ripple_animation;
+
+    &:active,
+    &:checked,
+    &:active:hover,
+    &:checked:hover {
+      background-color: $accent_color;
+    }
+
+    .tabwin-app-grid button {
+      min-width: 96px;
+      min-height: 96px;
+    }
+  }
+}

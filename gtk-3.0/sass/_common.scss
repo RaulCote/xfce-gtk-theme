@@ -1,7 +1,7 @@
-/* XFCE-D-PRO is a GTK/XFCE-theme developped by PaulXFCE**/
-
-/*   GRAND GTK.CSS FILE is a modified GTK.CSS with each element its own settings   */
-/*   Created by PAULXFCE (2017)                              */
+/* XFCE-GTK-THEME is a GTK/XFCE-theme developed by Raul **/
+/* Main inspirations have been XFCE-DARK-PRO and Greybird as they
+ treat XFCE as first class citizen. Styling wise inspirations come
+ from Adapta, Arc/Matcha and Materia theme. **/
 
 /*This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,16 +19,17 @@
 
 /****************************************************/
 
+/* prettier-ignore */
 * {
   background-clip: padding-box;
-  -gtktoolbutton-icon-spacing: 4;
-  -gtktextview-error-underline-color: #fc4138;
-  -gtkscrolledwindow-scrollbar-spacing: 0;
-  -gtktoolitemgroup-expander-size: 11;
-  -gtkwidget-text-handle-width: 20;
-  -gtkwidget-text-handle-height: 20;
-  -gtkdialog-button-spacing: 4;
-  -gtkdialog-action-area-border: 0;
+  -GtkToolButton-icon-spacing: 4;
+  -GtkTextView-error-underline-color: $error_color;
+  -GtksSrolledWindow-scrollbar-spacing: 0;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkWidget-text-handle-width: 20;
+  -GtkWidget-text-handle-height: 20;
+  -GtkDialog-button-spacing: 4;
+  -GtkDialog-action-area-border: 0;
 }
 
 *:disabled {
@@ -95,26 +96,26 @@
   background-color: $bg_color;
   color: $text_color;
   text-shadow: none;
-}
 
-.gtkstyle-fallback:hover {
-  background-color: $bg_color;
-  color: $text_color;
-}
+  &:hover {
+    color: $text_color;
+    background-color: lighten($bg_color, 10%);
+  }
 
-.gtkstyle-fallback:active {
-  background-color: $bg_color;
-  color: $text_color;
-}
+  &:active {
+    color: $text_color;
+    background-color: darken($bg_color, 10%);
+  }
 
-.gtkstyle-fallback:disabled {
-  background-color: #f6f8fa;
-  color: rgba(37, 37, 37, 0.55);
-}
+  &:selected {
+    background-color: $selected_color;
+    color: $text_on_selected;
+  }
 
-.gtkstyle-fallback:selected {
-  background-color: $bg_color;
-  color: #ffffff;
+  &:disabled {
+    background-color: $insensitive_bg_color;
+    color: $insensitive_fg_color;
+  }
 }
 
 /******************************************************/
